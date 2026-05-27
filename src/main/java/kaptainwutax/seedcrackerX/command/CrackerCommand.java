@@ -28,11 +28,11 @@ public class CrackerCommand extends ClientCommand {
     }
 
     private void feedback(boolean success, boolean flag) {
-        String action = Log.translate(flag ? "cracker.enabled" : "cracker.disabled");
+        String action = Log.translate(flag ? "seedlist enabled" : "seed list disabled");
         if (success) {
-            sendFeedback(Log.translate("cracker.successfully") + action, ChatFormatting.GREEN, false);
+            sendFeedback(Log.translate("seed successfully") + action, ChatFormatting.GREEN, false);
         } else {
-            sendFeedback(Log.translate("cracker.already") + action, ChatFormatting.RED, false);
+            sendFeedback(Log.translate("seed already") + action, ChatFormatting.RED, false);
         }
         Config.save();
     }

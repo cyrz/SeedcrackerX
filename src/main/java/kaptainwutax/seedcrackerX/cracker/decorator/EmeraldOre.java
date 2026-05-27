@@ -6,14 +6,14 @@ import com.seedfinding.mccore.rand.ChunkRand;
 import com.seedfinding.mccore.state.Dimension;
 import com.seedfinding.mccore.version.MCVersion;
 import com.seedfinding.mccore.version.VersionMap;
+
+import kaptainwutax.seedcrackerX.util.Log;
 import net.minecraft.world.level.levelgen.WorldgenRandom;
 
 public class EmeraldOre extends Decorator<Decorator.Config, EmeraldOre.Data> {
 
     public static final VersionMap<Config> CONFIGS = new VersionMap<Config>()
-            .add(MCVersion.v1_13, new Decorator.Config(4, 14))
-            .add(MCVersion.v1_16, new Decorator.Config(6, 14))
-            .add(MCVersion.v1_17, new Decorator.Config(6, 17));
+    		.add(MCVersion.v1_18, new Decorator.Config(3, 3));
 
     public EmeraldOre(MCVersion version) {
         super(CONFIGS.getAsOf(version), version);
@@ -81,8 +81,7 @@ public class EmeraldOre extends Decorator<Decorator.Config, EmeraldOre.Data> {
 
     @Override
     public boolean isValidBiome(Biome biome) {
-        return biome == Biomes.GRAVELLY_MOUNTAINS || biome == Biomes.MODIFIED_GRAVELLY_MOUNTAINS
-                || biome == Biomes.MOUNTAINS || biome == Biomes.WOODED_MOUNTAINS || biome == Biomes.MOUNTAIN_EDGE;
+        return true; //thinks it all plains biome
     }
 
     @Override

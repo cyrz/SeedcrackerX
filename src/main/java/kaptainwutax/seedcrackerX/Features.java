@@ -14,10 +14,7 @@ import com.seedfinding.mcfeature.structure.PillagerOutpost;
 import com.seedfinding.mcfeature.structure.RegionStructure;
 import com.seedfinding.mcfeature.structure.Shipwreck;
 import com.seedfinding.mcfeature.structure.SwampHut;
-import kaptainwutax.seedcrackerX.cracker.decorator.DeepDungeon;
-import kaptainwutax.seedcrackerX.cracker.decorator.Dungeon;
-import kaptainwutax.seedcrackerX.cracker.decorator.EmeraldOre;
-import kaptainwutax.seedcrackerX.cracker.decorator.WarpedFungus;
+import kaptainwutax.seedcrackerX.cracker.decorator.*;
 import kaptainwutax.seedcrackerX.finder.Finder;
 import kaptainwutax.seedcrackerX.structures.TrialChambers;
 
@@ -42,6 +39,10 @@ public class Features {
     public static EndGateway END_GATEWAY;
     public static DesertWell DESERT_WELL;
     public static EmeraldOre EMERALD_ORE;
+    public static GenericBlock BRICKS;
+    public static GenericBlock DIAMOND_ORE;
+    public static GenericBlock CYAN_TERRACOTTA;
+    public static GenericBlock CHEST;
     public static Dungeon DUNGEON;
     public static DeepDungeon DEEP_DUNGEON;
     public static WarpedFungus WARPED_FUNGUS;
@@ -63,6 +64,10 @@ public class Features {
         END_GATEWAY = safe(Finder.Type.END_GATEWAY, () -> new EndGateway(version));
         DESERT_WELL = safe(Finder.Type.DESERT_WELL, () -> new DesertWell(version));
         EMERALD_ORE = safe(Finder.Type.EMERALD_ORE, () -> new EmeraldOre(version));
+        DIAMOND_ORE = safe(Finder.Type.DIAMOND_ORE, () -> new GenericBlock(version));
+        CYAN_TERRACOTTA = safe(Finder.Type.CYAN_TERRACOTTA, () -> new GenericBlock(version));
+        CHEST = safe(Finder.Type.CHEST, () -> new GenericBlock(version));
+        BRICKS = safe(Finder.Type.BRICKS, () -> new GenericBlock(version));
         DUNGEON = safe(Finder.Type.DUNGEON, () -> new Dungeon(version));
         DEEP_DUNGEON = safe(Finder.Type.DUNGEON, () -> new DeepDungeon(version));
         WARPED_FUNGUS = safe(Finder.Type.WARPED_FUNGUS, () -> new WarpedFungus(version));

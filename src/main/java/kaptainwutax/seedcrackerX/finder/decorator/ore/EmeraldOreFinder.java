@@ -24,7 +24,7 @@ public class EmeraldOreFinder extends BlockFinder {
     protected static List<BlockPos> SEARCH_POSITIONS;
 
     public EmeraldOreFinder(Level world, ChunkPos chunkPos) {
-        super(world, chunkPos, Blocks.EMERALD_ORE);
+        super(world, chunkPos, Blocks.EMERALD_ORE );
         this.searchPositions = SEARCH_POSITIONS;
     }
 

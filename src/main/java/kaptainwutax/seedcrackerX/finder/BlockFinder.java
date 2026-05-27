@@ -13,6 +13,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import kaptainwutax.seedcrackerX.util.Log;
+
 public abstract class BlockFinder extends Finder {
 
     private final Set<BlockState> targetBlockStates = new HashSet<>();

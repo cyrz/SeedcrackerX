@@ -1,12 +1,8 @@
 package kaptainwutax.seedcrackerX.finder;
 
 import kaptainwutax.seedcrackerX.config.Config;
-import kaptainwutax.seedcrackerX.finder.decorator.DesertWellFinder;
-import kaptainwutax.seedcrackerX.finder.decorator.DungeonFinder;
-import kaptainwutax.seedcrackerX.finder.decorator.EndGatewayFinder;
-import kaptainwutax.seedcrackerX.finder.decorator.EndPillarsFinder;
-import kaptainwutax.seedcrackerX.finder.decorator.WarpedFungusFinder;
-import kaptainwutax.seedcrackerX.finder.decorator.ore.EmeraldOreFinder;
+import kaptainwutax.seedcrackerX.finder.decorator.*;
+import kaptainwutax.seedcrackerX.finder.decorator.ore.*;
 import kaptainwutax.seedcrackerX.finder.structure.*;
 import kaptainwutax.seedcrackerX.render.Cuboid;
 import kaptainwutax.seedcrackerX.util.FeatureToggle;
@@ -138,6 +134,10 @@ public abstract class Finder {
         END_GATEWAY(EndGatewayFinder::create, Category.DECORATORS, Config.get().endGateway, "finder.endGateways"),
         DUNGEON(DungeonFinder::create, Category.DECORATORS, Config.get().dungeon, "finder.dungeons"),
         EMERALD_ORE(EmeraldOreFinder::create, Category.DECORATORS, Config.get().emeraldOre, "finder.emeraldOres"),
+        DIAMOND_ORE(DiamondOreFinder::create, Category.DECORATORS, Config.get().diamondOre, "finder.diamondOres"),
+        BRICKS(BricksFinder::create, Category.DECORATORS, Config.get().bricks, "finder.bricks"),
+        CYAN_TERRACOTTA(CyanTerracottaFinder::create, Category.DECORATORS, Config.get().bricks, "finder.cyan_terracotta"),
+        CHEST(ChestFinder::create, Category.DECORATORS, Config.get().chest, "finder.chest"),
         DESERT_WELL(DesertWellFinder::create, Category.DECORATORS, Config.get().desertWell, "finder.desertWells"),
         WARPED_FUNGUS(WarpedFungusFinder::create, Category.DECORATORS, Config.get().warpedFungus, "finder.warpedFungus"),
 

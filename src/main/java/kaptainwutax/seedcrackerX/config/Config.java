@@ -33,7 +33,11 @@ public class Config {
     public FeatureToggle endPillars = new FeatureToggle(true);
     public FeatureToggle endGateway = new FeatureToggle(false);
     public FeatureToggle dungeon = new FeatureToggle(true);
+    public FeatureToggle cyanTerracotta = new FeatureToggle(false);
+    public FeatureToggle bricks = new FeatureToggle(false);
+    public FeatureToggle chest = new FeatureToggle(false);
     public FeatureToggle emeraldOre = new FeatureToggle(false);
+    public FeatureToggle diamondOre = new FeatureToggle(false);
     public FeatureToggle desertWell = new FeatureToggle(false);
     public FeatureToggle warpedFungus = new FeatureToggle(false);
     public FeatureToggle biome = new FeatureToggle(false);
